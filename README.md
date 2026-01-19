@@ -1,4 +1,3 @@
-<img width="1838" height="1065" alt="fpgalab_firmware" src="https://github.com/user-attachments/assets/44cd2b61-c62e-4b5a-8fb9-fbfefda27111" /># VSDInternship
 
 
 
@@ -34,17 +33,17 @@ LOCAL Linux setups proof
 
 # Questions and Answers
 <br>
-1.Where is the RISC-V program located in the vsd-riscv2 repository?
-ans: Program is in samples folder with filename sum1ton.c 
+1.Where is the RISC-V program located in the vsd-riscv2 repository?<br>
+ans: Program is in samples folder with filename sum1ton.c <br>
 <br>
-2.How is the program compiled and loaded into memory
-ans:riscv64-unknown-elf-gcc compiler compiles the code as per risc5 instructions and creates binary file sum1ton.o. This binary file is run with spike risc5 simulator to see the output.
+2.How is the program compiled and loaded into memory<br>
+ans:riscv64-unknown-elf-gcc compiler compiles the code as per risc5 instructions and creates binary file sum1ton.o. This binary file is run with spike risc5 simulator to see the output.<br>
 <br>
-3.How does the RISC-V core access memory and memory-mapped IO?
-ans:RISC-V uses a flat memory address space where each address points to a byte of memory. The processor accesses memory through Load/Store instructions.Risc5 trates each memory mapped IO as a register which has a memory address where we can store or load certain value usin risc5 native instructions.
+3.How does the RISC-V core access memory and memory-mapped IO?<br>
+ans:RISC-V uses a flat memory address space where each address points to a byte of memory. The processor accesses memory through Load/Store instructions.Risc5 trates each memory mapped IO as a register which has a memory address where we can store or load certain value usin risc5 native instructions.<br>
 <br>
-4.Where would a new FPGA IP block logically integrate in this system?
-ans:New FPGA block will be outside RIsc5 core with certain section of memory space of Risc5 mapped to it.So that Risc5 can access or modify the the config values of FPGA which will control the functionality of IP.Risc5 will provide the firmware which direvts how the IP will behave.Also Fpga IP can be use to ofload cpu from some tasks like timers where RISC 5 cpu core can send start and fetch the timer output from TIMER IP which does the counting task.
+4.Where would a new FPGA IP block logically integrate in this system?<br>
+ans:New FPGA block will be outside RIsc5 core with certain section of memory space of Risc5 mapped to it.So that Risc5 can access or modify the the config values of FPGA which will control the functionality of IP.Risc5 will provide the firmware which direvts how the IP will behave.Also Fpga IP can be use to ofload cpu from some tasks like timers where RISC 5 cpu core can send start and fetch the timer output from TIMER IP which does the counting task.<br>
 
 
 
