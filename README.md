@@ -11,13 +11,15 @@ Proof of codespace usage below:
 
 
 Screenshot of risc5 program i ran in workspace
-<img width="1561" height="915" alt="proof_of_codespace_usage" src="https://github.com/user-attachments/assets/f3bf5a8d-f07a-416c-8ce6-a76882b3e9c7" />
+<img width="1229" height="191" alt="codebasrisc_output" src="https://github.com/user-attachments/assets/8c3ec767-5b2d-4488-afff-99416db95ad2" />
 <br>
+
 
 
 
 Screenshot of fpga make run in workspace
-<img width="1229" height="191" alt="codebasrisc_output" src="https://github.com/user-attachments/assets/b9725310-d59b-4d9d-a0d2-0e26b74714fd" />
+<img width="1023" height="542" alt="fpga_output" src="https://github.com/user-attachments/assets/f022c647-db89-4113-bf0a-689ae40c60c4" />
 <br>
+
 
 
