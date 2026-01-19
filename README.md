@@ -1,6 +1,8 @@
-# VSDInternship
+<img width="1838" height="1065" alt="fpgalab_firmware" src="https://github.com/user-attachments/assets/44cd2b61-c62e-4b5a-8fb9-fbfefda27111" /># VSDInternship
 
 
+
+# Proofs 
 
 
 forked the codespace as per instructions : https://github.com/varun-ms-s/vsd-riscv3 <br>
@@ -21,6 +23,28 @@ Screenshot of risc5 program i ran in workspace
 Screenshot of fpga make run in workspace
 <img width="1023" height="542" alt="fpga_output" src="https://github.com/user-attachments/assets/f022c647-db89-4113-bf0a-689ae40c60c4" />
 <br>
+
+
+LOCAL Linux setups proof
+
+<img width="1838" height="1065" alt="fpgalab_firmware" src="https://github.com/user-attachments/assets/312e9989-1ac1-4138-a4d5-488437cebec5" />
+<img width="1830" height="184" alt="toolchain_risc5" src="https://github.com/user-attachments/assets/88c4f748-aebd-42d1-bb23-8328590078f1" />
+
+
+
+# Questions and Answers
+<br>
+1.Where is the RISC-V program located in the vsd-riscv2 repository?
+ans: Program is in samples folder with filename sum1ton.c 
+<br>
+2.How is the program compiled and loaded into memory
+ans:riscv64-unknown-elf-gcc compiler compiles the code as per risc5 instructions and creates binary file sum1ton.o. This binary file is run with spike risc5 simulator to see the output.
+<br>
+3.How does the RISC-V core access memory and memory-mapped IO?
+ans:RISC-V uses a flat memory address space where each address points to a byte of memory. The processor accesses memory through Load/Store instructions.Risc5 trates each memory mapped IO as a register which has a memory address where we can store or load certain value usin risc5 native instructions.
+<br>
+4.Where would a new FPGA IP block logically integrate in this system?
+ans:New FPGA block will be outside RIsc5 core with certain section of memory space of Risc5 mapped to it.So that Risc5 can access or modify the the config values of FPGA which will control the functionality of IP.Risc5 will provide the firmware which direvts how the IP will behave.Also Fpga IP can be use to ofload cpu from some tasks like timers where RISC 5 cpu core can send start and fetch the timer output from TIMER IP which does the counting task.
 
 
 
