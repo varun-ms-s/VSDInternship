@@ -40,7 +40,7 @@ ans: Program is in samples folder with filename sum1ton.c <br>
 ans:riscv64-unknown-elf-gcc compiler compiles the code as per risc5 instructions and creates binary file sum1ton.o. This binary file is run with spike risc5 simulator to see the output.<br>
 <br>
 3.How does the RISC-V core access memory and memory-mapped IO?<br>
-ans:RISC-V uses a flat memory address space where each address points to a byte of memory. The processor accesses memory through Load/Store instructions.Risc5 trates each memory mapped IO as a register which has a memory address where we can store or load certain value usin risc5 native instructions.<br>
+ans:RISC-V uses a flat memory address space where each address points to a byte of memory. The processor accesses memory through Load/Store instructions.Risc5 treats each memory mapped IO as a register which has a memory address where we can store or load certain value usin risc5 native instructions.<br>
 <br>
 4.Where would a new FPGA IP block logically integrate in this system?<br>
 ans:New FPGA block will be outside RIsc5 core with certain section of memory space of Risc5 mapped to it.So that Risc5 can access or modify the the config values of FPGA which will control the functionality of IP.Risc5 will provide the firmware which direvts how the IP will behave.Also Fpga IP can be use to ofload cpu from some tasks like timers where RISC 5 cpu core can send start and fetch the timer output from TIMER IP which does the counting task.<br>
