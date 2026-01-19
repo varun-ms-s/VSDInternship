@@ -11,7 +11,8 @@ Proof of codespace usage below:
 
 
 Screenshot of risc5 program i ran in workspace
-<img width="1229" height="191" alt="codebasrisc_output" src="https://github.com/user-attachments/assets/8c3ec767-5b2d-4488-afff-99416db95ad2" />
+<img width="1181" height="123" alt="risc5_out" src="https://github.com/user-attachments/assets/9d116755-96bc-424e-ac47-7d9114714f4b" />
+
 <br>
 
 
